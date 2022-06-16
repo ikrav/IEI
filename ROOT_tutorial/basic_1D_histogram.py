@@ -13,7 +13,7 @@ binning = np.linspace(xlo, xhi, nbins+1)
 
 hist1 = TH1F("hist1", "My histogram", nbins, binning)
 hist2 = TH1F("hist2", "My histogram", nbins, binning)
-# Alternatively: hist = TH1F("hist", "My histogram", xlo, xhi)
+# Alternatively: hist = TH1F("hist", "My histogram", nbins, xlo, xhi)
 
 # Fill histogram with Poisson-distributed random numbers
 generator = TRandom()  # generic generator object
