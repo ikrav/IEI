@@ -16,15 +16,17 @@ tree.Branch("event_number"  , event_number, 'event_number/I')
 tree.Branch("SNR"           , SNR,          'SNR/F')
 
 # Put into the tree data event by event
+# Note: simple int/float variables are actually arrays which have one element,
+# hence [0] below for each event.
 
 # First event
-event_number = 0
-SNR = 2.34
+event_number[0] = 0
+SNR[0] = 2.34
 tree.Fill()   # this stores the event in the tree
 
 # Second event
-event_number = 1
-SNR = 7.954
+event_number[0] = 1
+SNR[0] = 7.954
 tree.Fill()   # this stores the event in the tree
 
 # Print tree structure as a check
